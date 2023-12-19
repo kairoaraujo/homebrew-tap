@@ -8,17 +8,17 @@ class Tufie < Formula
   version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_darwin_arm64.tar.gz"
-      sha256 "1bb307093a8c7eaf2c5b2f0f89a89d628215570c9f0964e6318a6e0be1d8240a"
+    if Hardware::CPU.intel?
+      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_darwin_amd64.tar.gz"
+      sha256 "2427e22eb20848d1e5476f89818abe89b8d0e1a4345da001bd57b3608ab2bf42"
 
       def install
         bin.install "tufie"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_darwin_amd64.tar.gz"
-      sha256 "d38df936509e5943883d4b81cdede920c1157cea016838402094a591dbed5c3e"
+    if Hardware::CPU.arm?
+      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_darwin_arm64.tar.gz"
+      sha256 "b1373759e5d150dc3693e2ebc9dde3cd10fbd9388a5e1d90a1b39894f92077b9"
 
       def install
         bin.install "tufie"
@@ -29,7 +29,7 @@ class Tufie < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_linux_arm64.tar.gz"
-      sha256 "7820bdb38bcbc00d9b2ded9339e1bb9b045f9d55a13f924b05ffb5c0827e04c1"
+      sha256 "32359d32f20c2f44ba7fb38ab2427e7843ed0ba769e9c849718179424e2c83f9"
 
       def install
         bin.install "tufie"
@@ -37,7 +37,7 @@ class Tufie < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_linux_amd64.tar.gz"
-      sha256 "440bec7ccdfa716f7c1fb9b8fb1aa8d208a74fe74f42e2c182b11ad21750b950"
+      sha256 "74d5dc5ea673d874f75ed088b1e66e5caf0165b05eb406fdf52d2c861213b28b"
 
       def install
         bin.install "tufie"
