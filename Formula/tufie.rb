@@ -5,20 +5,20 @@
 class Tufie < Formula
   desc "TUFie an Open Source generic TUF client"
   homepage "https://github.com/kairoaraujo/tufie"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_darwin_amd64.tar.gz"
-      sha256 "2427e22eb20848d1e5476f89818abe89b8d0e1a4345da001bd57b3608ab2bf42"
+    if Hardware::CPU.arm?
+      url "https://github.com/kairoaraujo/tufie/releases/download/v0.3.0/tufie_0.3.0_darwin_arm64.tar.gz"
+      sha256 "5e256fa28d287ad99dad341a0d85cd1734dc76d557a40dca7d9fde76f5cc93dc"
 
       def install
         bin.install "tufie"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_darwin_arm64.tar.gz"
-      sha256 "b1373759e5d150dc3693e2ebc9dde3cd10fbd9388a5e1d90a1b39894f92077b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/kairoaraujo/tufie/releases/download/v0.3.0/tufie_0.3.0_darwin_amd64.tar.gz"
+      sha256 "b682fdf833107055e287688210999e977c5285971084f13d5ac908e580cf0bed"
 
       def install
         bin.install "tufie"
@@ -28,16 +28,16 @@ class Tufie < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_linux_arm64.tar.gz"
-      sha256 "32359d32f20c2f44ba7fb38ab2427e7843ed0ba769e9c849718179424e2c83f9"
+      url "https://github.com/kairoaraujo/tufie/releases/download/v0.3.0/tufie_0.3.0_linux_arm64.tar.gz"
+      sha256 "216bf94d027b0578011adc6e77ffb8a81bcdd017193c3fe2b8c557f29f75f5c2"
 
       def install
         bin.install "tufie"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kairoaraujo/tufie/releases/download/v0.2.0/tufie_0.2.0_linux_amd64.tar.gz"
-      sha256 "74d5dc5ea673d874f75ed088b1e66e5caf0165b05eb406fdf52d2c861213b28b"
+      url "https://github.com/kairoaraujo/tufie/releases/download/v0.3.0/tufie_0.3.0_linux_amd64.tar.gz"
+      sha256 "2f448c7abb47e4425d9107580768919b508c1d0922e68aae832ca205db5dcb46"
 
       def install
         bin.install "tufie"
